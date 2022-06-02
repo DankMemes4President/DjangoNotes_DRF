@@ -1,5 +1,7 @@
 # DjangoNotes_DRF
 
+##### [Postman Workspace](https://www.postman.com/supply-administrator-24353865/workspace/gdsc-recr-task1/collection/21276947-865f872b-506e-49ce-93bc-703ff83c4048?action=share&creator=21276947)
+
 ### API Endpoints:
 
 - [POST] https://mysterious-brushlands-94222.herokuapp.com/notes/register
