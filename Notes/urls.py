@@ -10,4 +10,5 @@ urlpatterns = [
     path('<int:note_id>/details', views.detail, name='detail'),
     path('<int:note_id>/update', views.update, name='update'),
     path('<int:note_id>/delete', views.delete, name='delete'),
+    path('search/', views.NoteSearchView.as_view(), name='search'),
 ]

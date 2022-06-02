@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate
 from django.core.exceptions import ObjectDoesNotExist
-from rest_framework import status
+from rest_framework import status, filters
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
+from rest_framework.generics import ListAPIView
 from Notes.serializers import UserSerializer, NoteSerializer
 from Notes.models import UserProfile, Note
 
@@ -127,3 +127,14 @@ def update(request, note_id):
             "response": "404 OBJECT DOES NOT EXIST"
         }
         return Response(content, status=status.HTTP_404_NOT_FOUND)
+
+
+class NoteSearchView(ListAPIView):
+    search_fields = ['tag_string']
+    filter_backends = (filters.SearchFilter,)
+    serializer_class = NoteSerializer
+
+    def get_queryset(self):
+        user = self.request.user.userprofile
+        notes = user.note_set.all()
+        return notes
