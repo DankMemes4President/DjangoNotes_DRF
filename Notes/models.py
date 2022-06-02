@@ -15,6 +15,7 @@ class Note(models.Model):
     title = models.CharField(max_length=500)
     content = models.TextField()
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    tag_string = models.CharField(max_length=500, null=True, blank=True)
 
     def __str__(self):
         return self.title
