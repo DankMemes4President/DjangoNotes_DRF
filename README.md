@@ -2,7 +2,7 @@
 
 ### API Endpoints:
 
-- [POST] http://base_url/notes/register
+- [POST] https://mysterious-brushlands-94222.herokuapp.com/notes/register
 <pre>
 {
 "username: "",
@@ -10,7 +10,7 @@
 }
 </pre>
 
-- [POST] http://base_url/notes/login - This will give you an AuthToken that you need to use in header of other requests
+- [POST] https://mysterious-brushlands-94222.herokuapp.com/notes/login - This will give you an AuthToken that you need to use in header of other requests
 <pre>
 {
 "username: "",
@@ -18,8 +18,8 @@
 }
 </pre>
 
-- [GET] http://base_url/notes/ - Shows all your notes
-- [POST] http://base_url/notes/ - Creates new notes (tags should be seperated in one string like "tag1, tag2")
+- [GET] https://mysterious-brushlands-94222.herokuapp.com/notes/ - Shows all your notes
+- [POST] https://mysterious-brushlands-94222.herokuapp.com/notes/ - Creates new notes (tags should be seperated in one string like "tag1, tag2")
 <pre>
 {
 "title": "",
@@ -28,11 +28,11 @@
 }
 </pre>
 
-- [GET] http://base_url/notes/<id_of_note>/details - Shows a detail view of that particular note
+- [GET] https://mysterious-brushlands-94222.herokuapp.com/notes/<id_of_note>/details - Shows a detail view of that particular note
 
-- [POST] http://base_url/notes/<id_of_note>/delete - Deletes that particular note
+- [POST] https://mysterious-brushlands-94222.herokuapp.com/notes/<id_of_note>/delete - Deletes that particular note
 
-- [POST] http://base_url/notes/<id_of_note>/update - Updates that particular note
+- [POST] https://mysterious-brushlands-94222.herokuapp.com/notes/<id_of_note>/update - Updates that particular note
 
 <pre>
 {
@@ -42,4 +42,4 @@
 }
 </pre>
 
-- [GET] http://base_url/notes/?search=<search_tag> - Searches for occurance of <search_tag> in tags of Notes
+- [GET] https://mysterious-brushlands-94222.herokuapp.com/notes/?search=<search_tag> - Searches for occurance of <search_tag> in tags of Notes
